@@ -66,8 +66,8 @@ const Icons = {
 const DATA = {
   navbar: [
     { href: "home", icon: HomeIcon, label: "Home" },
-    { href: "work", icon: PencilIcon, label: "Work" },
     { href: "process", icon: PencilIcon, label: "Process" },
+    { href: "work", icon: PencilIcon, label: "Work" },
     { href: "pricing", icon: PencilIcon, label: "Pricing" },
   ],
   contact: {

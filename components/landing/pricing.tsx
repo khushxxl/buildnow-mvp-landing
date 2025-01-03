@@ -14,10 +14,11 @@ const plans = [
     features: [
       "Basic UI/UX Design",
       "Core Feature Implementation",
-      "Basic Authentication",
-      "2 Week Delivery",
-      "1 Month Support",
+      "Authentication",
       "Source Code Access",
+      "Android & iOS",
+      "14 Days Delivery",
+      "1 Month Support",
     ],
   },
   {
@@ -25,32 +26,24 @@ const plans = [
     price: "$4999",
     description: "For more complex applications",
     features: [
-      "Advanced UI/UX Design",
+      "Premium UI/UX Design",
       "Complex Features",
-      "Social Auth Integration",
-      "3 Week Delivery",
-      "3 Months Support",
-      "Source Code Access",
-      "API Integration",
+      "Authentication",
+      "Analytics",
       "Push Notifications",
+      "In-App Purchases",
+      "14 Days Delivery",
+      "2 Months Support",
+      "Source Code Access",
     ],
     highlighted: true,
   },
   {
     name: "Enterprise",
     price: "Custom",
-    description: "For full-scale applications",
-    features: [
-      "Premium UI/UX Design",
-      "Custom Feature Development",
-      "Advanced Security",
-      "Custom Timeline",
-      "6 Months Support",
-      "Source Code Access",
-      "Third-party Integrations",
-      "Scalable Architecture",
-      "24/7 Priority Support",
-    ],
+    description: "For intense business apps",
+    features: [],
+    isCustom: true,
   },
 ];
 
@@ -117,20 +110,37 @@ function Pricing() {
                   </li>
                 ))}
               </ul>
-              <button
-                data-cal-namespace="30min"
-                data-cal-link="khushaal-choithramani-5mvbsx/30min"
-                data-cal-config='{"layout":"month_view"}'
-                onClick={() => scrollToSection("home")}
-                className={cn(
-                  "w-full mt-8 py-3 max-w-xs mx-auto px-6 rounded-lg font-medium transition-all absolute bottom-5 left-0 right-0",
-                  plan.highlighted
-                    ? "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white shadow-lg shadow-blue-500/30"
-                    : "bg-white/10 hover:bg-white/20"
-                )}
-              >
-                Get Started
-              </button>
+              {plan.isCustom ? (
+                <button
+                  data-cal-namespace="30min"
+                  data-cal-link="khushaal-choithramani-5mvbsx/30min"
+                  data-cal-config='{"layout":"month_view"}'
+                  onClick={() => scrollToSection("home")}
+                  className={cn(
+                    "w-full mt-8 py-3 max-w-xs mx-auto px-6 rounded-lg font-medium transition-all absolute bottom-5 left-0 right-0",
+                    plan.highlighted
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white shadow-lg shadow-blue-500/30"
+                      : "bg-white/10 hover:bg-white/20"
+                  )}
+                >
+                  Book a Call
+                </button>
+              ) : (
+                <button
+                  data-cal-namespace="30min"
+                  data-cal-link="khushaal-choithramani-5mvbsx/30min"
+                  data-cal-config='{"layout":"month_view"}'
+                  onClick={() => scrollToSection("home")}
+                  className={cn(
+                    "w-full mt-8 py-3 max-w-xs mx-auto px-6 rounded-lg font-medium transition-all absolute bottom-5 left-0 right-0",
+                    plan.highlighted
+                      ? "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white shadow-lg shadow-blue-500/30"
+                      : "bg-white/10 hover:bg-white/20"
+                  )}
+                >
+                  Get Started
+                </button>
+              )}
             </motion.div>
           ))}
         </div>

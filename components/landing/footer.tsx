@@ -11,7 +11,7 @@ function Footer() {
       <div className="absolute bottom-0 left-1/2 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto relative">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -141,16 +141,16 @@ function Footer() {
               </li>
             </ul>
           </motion.div>
-        </div>
+        </div> */}
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="mt-16 pt-8 border-t border-gray-800 text-center text-gray-400"
+          className="mt-16 pt-2 border-t border-gray-800 text-center text-gray-400"
         >
           <p>
-            &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+            &copy; {new Date().getFullYear()} .buildnow . All rights reserved.
           </p>
         </motion.div>
       </div>
