@@ -4,7 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
-
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 const plans = [
   {
     name: "Basic",
@@ -53,7 +54,20 @@ const plans = [
   },
 ];
 
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 function Pricing() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
   return (
     <div id="pricing" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
@@ -78,7 +92,7 @@ function Pricing() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               className={cn(
-                "p-8 rounded-2xl relative",
+                "p-8 rounded-2xl relative min-h-[550px]",
                 "backdrop-blur-sm border",
                 plan.highlighted
                   ? "-translate-y-4 bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-blue-400/5 border-blue-500/50 shadow-xl shadow-blue-500/20"
@@ -104,8 +118,12 @@ function Pricing() {
                 ))}
               </ul>
               <button
+                data-cal-namespace="30min"
+                data-cal-link="khushaal-choithramani-5mvbsx/30min"
+                data-cal-config='{"layout":"month_view"}'
+                onClick={() => scrollToSection("home")}
                 className={cn(
-                  "w-full mt-8 py-3 px-6 rounded-lg font-medium transition-all",
+                  "w-full mt-8 py-3 max-w-xs mx-auto px-6 rounded-lg font-medium transition-all absolute bottom-5 left-0 right-0",
                   plan.highlighted
                     ? "bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white shadow-lg shadow-blue-500/30"
                     : "bg-white/10 hover:bg-white/20"

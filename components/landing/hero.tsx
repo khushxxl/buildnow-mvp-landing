@@ -20,11 +20,11 @@ function Hero() {
   return (
     <div
       id="home"
-      className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4"
+      className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 mx-auto"
     >
-      <div className="absolute top-20 right-20 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
-      <div className="absolute bottom-40 left-32 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
-      <div className="absolute top-1/2 -right-10 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
+      <div className="absolute hidden md:block top-20 right-20 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
+      <div className="absolute hidden md:block bottom-40 left-32 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
+      <div className="absolute hidden md:block top-1/2 -right-10 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
       <AnimatedGradientText className="cursor-pointer">
         🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
         <span
@@ -50,7 +50,7 @@ function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="text-xl mb-8  text-gray-600 dark:text-gray-300"
+        className="text-xl mb-8 text-gray-600 dark:text-gray-300"
       >
         Got an app idea? We can help you design, develop and market in days
       </motion.p>
@@ -59,6 +59,7 @@ function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.4 }}
+        className="flex flex-col items-center"
       >
         <button
           data-cal-namespace="30min"
@@ -69,7 +70,7 @@ function Hero() {
           Book a Call
         </button>
 
-        <div className=" mt-14 flex justify-center">
+        <div className="mt-14">
           <ArrowDown className="size-6 text-gray-400 animate-bounce" />
         </div>
       </motion.div>

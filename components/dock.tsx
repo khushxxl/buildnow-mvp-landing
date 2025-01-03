@@ -103,7 +103,7 @@ export function DockDemo() {
           {DATA.navbar.map((item) => (
             <DockIcon
               onClick={() => scrollToSection(item.href)}
-              className="mx-5"
+              className="mx-3 md:mx-5"
               key={item.href}
             >
               <p className="">{item.label}</p>

@@ -12,10 +12,10 @@ import React from "react";
 
 function Home() {
   return (
-    <div className=" w-full h-full">
+    <div className="max-w-7xl mx-auto">
       <Hero />
-      <Projects />
       <Process />
+      <Projects />
       <Pricing />
       <Footer />
       {/* <Founder /> */}
