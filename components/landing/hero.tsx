@@ -9,6 +9,8 @@ import { ArrowDown } from "lucide-react";
 
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
+import Image from "next/image";
+import logo from "../../app/images/logo.png";
 
 function Hero() {
   useEffect(() => {
@@ -17,25 +19,41 @@ function Hero() {
       cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
     })();
   }, []);
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div
       id="home"
       className="relative min-h-[70vh] flex flex-col items-center justify-center text-center px-4 mx-auto"
     >
+      <Image
+        src={logo}
+        alt="logo"
+        width={30}
+        height={30}
+        className="rounded-md z-50"
+      />
       <div className="absolute hidden md:block top-20 right-20 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
       <div className="absolute hidden md:block bottom-40 left-32 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
       <div className="absolute hidden md:block top-1/2 -right-10 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
-      <AnimatedGradientText className="cursor-pointer">
-        🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
-        <span
-          className={cn(
-            `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
-          )}
-        >
-          Get the best deal
-        </span>
-        <ChevronRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-      </AnimatedGradientText>
+      <div className=" mt-10" onClick={() => scrollToSection("pricing")}>
+        <AnimatedGradientText className="cursor-pointer">
+          🎉 <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+          <span
+            className={cn(
+              `inline animate-gradient bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent`
+            )}
+          >
+            Get the best deal
+          </span>
+          <ChevronRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+        </AnimatedGradientText>
+      </div>
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

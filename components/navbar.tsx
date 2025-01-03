@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { DarkModeToggler } from "./dark-mode-toggler";
 import Link from "next/link";
 import { getAuthenticatedUser, signoutUser } from "@/lib/db/db.actions";
+import Image from "next/image";
 
 function Navbar() {
   const [user, setUser] = useState<any>(null);
@@ -35,7 +36,7 @@ function Navbar() {
 
   return (
     <div className=" flex justify-between items-center p-10 px-10">
-      <div>
+      <div className="flex items-center space-x-3">
         <h1 className="text-2xl font-bold tracking-wide">.buildnow</h1>
       </div>
 
