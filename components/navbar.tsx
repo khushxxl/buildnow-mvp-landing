@@ -34,31 +34,28 @@ function Navbar() {
   };
 
   return (
-    <div className="top-0 sticky z-50 flex justify-between items-center p-5 px-10">
-      <Link href={"/"}>
-        <h1 className="font-poppins text-sm">actually ship(fast)</h1>
-      </Link>
+    <div className=" flex justify-between items-center p-10 px-10">
+      <div>
+        <h1 className="text-2xl font-bold tracking-wide">.buildnow</h1>
+      </div>
 
-      <div className="flex items-center space-x-3">
-        {user ? (
-          <div className="flex items-center space-x-3">
-            <h1 className="font-poppins text-sm">
-              Hey, {user?.user_metadata?.username}
-            </h1>
-
-            <h1
-              onClick={handleSignOut}
-              className="font-poppins text-sm underline cursor-pointer"
-            >
-              Sign out
-            </h1>
-          </div>
-        ) : (
-          <Link href={"/auth/sign-in"}>
-            <h1 className="font-poppins text-sm underline">Sign in</h1>
-          </Link>
-        )}
-        <DarkModeToggler />
+      <div
+        className="p-2 px-5 flex items-center gap-2 cursor-pointer"
+        style={{
+          background: "rgba(255, 255, 255, 0.2)",
+          backdropFilter: "blur(1px)",
+          WebkitBackdropFilter: "blur(1px)",
+          borderRadius: "9999px",
+          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+          fontSize: "0.875rem",
+        }}
+      >
+        <img
+          src="https://i.ibb.co/yFwjm0j/logo-white.png"
+          alt=""
+          className="size-4"
+        />
+        @khushxxl_04
       </div>
     </div>
   );

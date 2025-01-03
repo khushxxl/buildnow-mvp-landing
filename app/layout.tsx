@@ -25,15 +25,15 @@ const poppins_bold = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Nextjs Boilerplate",
+  title: ".buildnow",
   description:
-    "actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!",
+    "build now - we design, build and ship your next mobile app in 14 days",
   twitter: {
     card: "summary_large_image", // For a large Twitter card
     site: "https://boilerplate-nextjs-delta.vercel.app/",
-    title: "actually ship(fast) - Nextjs Boilerplate",
+    title: "build now - Nextjs Boilerplate",
     description:
-      "actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!",
+      "build now - we design, build and ship your next mobile app in 14 days",
     images: "/twitter-image.png", // Twitter image
   },
 };
@@ -51,13 +51,10 @@ export default function RootLayout({
           name="twitter:site"
           content="https://boilerplate-nextjs-delta.vercel.app/"
         />
-        <meta
-          name="twitter:title"
-          content="actually ship(fast) - Nextjs Boilerplate"
-        />
+        <meta name="twitter:title" content="build now - Nextjs Boilerplate" />
         <meta
           name="twitter:description"
-          content="actually ship(fast) - a simple to use boilerplate right out of the box with auth, payments and db functions all packed with in!"
+          content="build now - we design, build and ship your next mobile app in 14 days"
         />
         <meta name="twitter:image" content="/twitter-image.png" />
       </Head>
@@ -66,7 +63,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
