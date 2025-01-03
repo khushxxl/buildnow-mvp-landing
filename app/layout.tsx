@@ -30,8 +30,16 @@ export const metadata: Metadata = {
     "build now - we design, build and ship your next mobile app in 14 days",
   twitter: {
     card: "summary_large_image", // For a large Twitter card
-    site: "https://boilerplate-nextjs-delta.vercel.app/",
-    title: "build now - Nextjs Boilerplate",
+    site: "https://buildnow-mvp-landing.vercel.app/",
+    title:
+      "build now - we design, build and ship your next mobile app in 14 days",
+    description:
+      "build now - we design, build and ship your next mobile app in 14 days",
+    images: "/twitter-image.png", // Twitter image
+  },
+  openGraph: {
+    title:
+      "build now - we design, build and ship your next mobile app in 14 days",
     description:
       "build now - we design, build and ship your next mobile app in 14 days",
     images: "/twitter-image.png", // Twitter image
@@ -49,9 +57,12 @@ export default function RootLayout({
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:site"
-          content="https://boilerplate-nextjs-delta.vercel.app/"
+          content="https://buildnow-mvp-landing.vercel.app/"
         />
-        <meta name="twitter:title" content="build now - Nextjs Boilerplate" />
+        <meta
+          name="twitter:title"
+          content="build now - we design, build and ship your next mobile app in 14 days"
+        />
         <meta
           name="twitter:description"
           content="build now - we design, build and ship your next mobile app in 14 days"
