@@ -5,12 +5,13 @@ import { motion } from "framer-motion";
 import AnimatedGradientText from "../ui/animated-gradient-text";
 import { cn } from "@/lib/utils";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown, Sparkles, ShoppingCart, Store } from "lucide-react";
 
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Image from "next/image";
 import logo from "../../app/images/logo.png";
+import { TypesShowcase } from "./types-showcase";
 
 function Hero() {
   useEffect(() => {
@@ -34,9 +35,9 @@ function Hero() {
       <Image
         src={logo}
         alt="logo"
-        width={30}
-        height={30}
-        className="rounded-md z-50"
+        width={50}
+        height={50}
+        className="rounded-xl z-50"
       />
       <div className="absolute hidden md:block top-20 right-20 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
       <div className="absolute hidden md:block bottom-40 left-32 w-48 h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl -z-10" />
@@ -72,6 +73,26 @@ function Hero() {
       >
         Got an app idea? We can help you design, develop and market in days
       </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="flex flex-wrap justify-center gap-6 mb-8"
+      >
+        <div className="flex items-center bg-white/10 backdrop-blur-xs border border-gray-200 dark:border-gray-700 rounded-xl p-3 shadow-sm">
+          <Sparkles className="text-purple-500 mr-2" size={20} />
+          <span className="text-sm font-medium">AI-Powered Apps</span>
+        </div>
+        <div className="flex items-center bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-3 shadow-sm">
+          <ShoppingCart className="text-blue-500 mr-2" size={20} />
+          <span className="text-sm font-medium">Subscription Paywalls</span>
+        </div>
+        <div className="flex items-center bg-white/10 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-xl p-3 shadow-sm">
+          <Store className="text-green-500 mr-2" size={20} />
+          <span className="text-sm font-medium">App Store Ready</span>
+        </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

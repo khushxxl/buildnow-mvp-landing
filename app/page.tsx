@@ -4,6 +4,7 @@ import Founder from "@/components/landing/founder";
 import Hero from "@/components/landing/hero";
 import Pricing from "@/components/landing/pricing";
 import Process from "@/components/landing/process";
+import Testimonial from "@/components/landing/testmonial";
 import Projects from "@/components/landing/work";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import DotPattern from "@/components/ui/dot-pattern";
@@ -17,6 +18,7 @@ function Home() {
       <Process />
       <Projects />
       <Pricing />
+      {/* <Testimonial /> */}
       <Footer />
       {/* <Founder /> */}
       {/* <AnimatedGridPattern

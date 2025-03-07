@@ -36,7 +36,7 @@ function Navbar() {
 
   return (
     <div className=" flex justify-between items-center p-10 px-10">
-      <div className="flex items-center space-x-3">
+      <div className="flex items-center">
         <h1 className="text-2xl font-bold tracking-wide">.buildnow</h1>
       </div>
 
