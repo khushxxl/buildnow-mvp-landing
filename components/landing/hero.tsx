@@ -11,7 +11,6 @@ import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import Image from "next/image";
 import logo from "../../app/images/logo.png";
-import { TypesShowcase } from "./types-showcase";
 
 function Hero() {
   useEffect(() => {
