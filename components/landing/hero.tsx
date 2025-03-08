@@ -60,8 +60,8 @@ function Hero() {
         transition={{ duration: 0.8 }}
         className="text-6xl font-bold mb-6 max-w-4xl mt-10"
       >
-        Building your mobile app{" "}
-        <span className="text-blue-500">MVP in 14 days</span>
+        Building your mobile app <span className="text-blue-500">MVP</span>,
+        Quick
       </motion.h1>
 
       <motion.p
@@ -70,7 +70,7 @@ function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="text-xl mb-8 text-gray-600 dark:text-gray-300"
       >
-        Got an app idea? We can help you design, develop and market in days
+        Got an app idea? We can help you design, develop & ship in days
       </motion.p>
 
       <motion.div
