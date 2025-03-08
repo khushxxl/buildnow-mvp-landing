@@ -6,6 +6,7 @@ import Pricing from "@/components/landing/pricing";
 import Process from "@/components/landing/process";
 import Testimonial from "@/components/landing/testmonial";
 import Projects from "@/components/landing/work";
+import Navbar from "@/components/navbar";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
@@ -14,6 +15,7 @@ import React from "react";
 function Home() {
   return (
     <div className="max-w-7xl mx-auto">
+      <Navbar />
       <Hero />
       <Process />
       <Projects />
