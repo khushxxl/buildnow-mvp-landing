@@ -18,6 +18,8 @@ function StudioPage() {
     },
   ];
 
+  const apps_images = [];
+
   return (
     <div className="min-h-screen  text-white p-8 pt-24">
       <div className="max-w-6xl mx-auto">
@@ -59,6 +61,31 @@ function StudioPage() {
           className="mb-16"
         >
           <h2 className="text-xl mb-8">Portfolio</h2>
+          <div className="space-y-5">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 + 0.3 }}
+                className="mt-3"
+              >
+                <a target="_blank" href={project.link} className="underline">
+                  {project.name}
+                </a>
+                <p className="text-gray-400">{project.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mb-16"
+        >
+          <h2 className="text-xl mb-8">Apps we have worked on</h2>
           <div className="space-y-5">
             {projects.map((project, index) => (
               <motion.div
