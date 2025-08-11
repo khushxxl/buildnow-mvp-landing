@@ -50,7 +50,7 @@ const projects = [
   {
     title: "Makamba Maternity",
     description:
-      "Developed a pregnancy tracker app, which includes all the functionalities for a mother, and makes her pregnancy tracking easy. Includes a on service doctor on chat / call subscriptions. A complete SASS product.",
+      "Developed a pregnancy tracker app, which includes all the functionalities for a mother, and makes her pregnancy tracking easy. Includes a on service doctor on chat / call subscriptions.",
     image: "https://i.ibb.co/g3MgYF4/370shots-so.png",
     tags: ["React Native", "Mobile App"],
     href: "https://apps.apple.com/app/id6469010105",
