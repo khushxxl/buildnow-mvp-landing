@@ -40,24 +40,26 @@ function Navbar() {
         <h1 className="text-2xl font-bold tracking-wide">.buildnow</h1>
       </div>
 
-      <div
-        className="p-2 px-5 flex items-center gap-2 cursor-pointer"
-        style={{
-          background: "rgba(255, 255, 255, 0.2)",
-          backdropFilter: "blur(1px)",
-          WebkitBackdropFilter: "blur(1px)",
-          borderRadius: "9999px",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          fontSize: "0.875rem",
-        }}
-      >
-        <img
-          src="https://i.ibb.co/yFwjm0j/logo-white.png"
-          alt=""
-          className="size-4"
-        />
-        @khushxxl_04
-      </div>
+      <Link href="https://x.com/khushaal_04" target="_blank">
+        <div
+          className="p-2 px-5 flex items-center gap-2 cursor-pointer"
+          style={{
+            background: "rgba(255, 255, 255, 0.2)",
+            backdropFilter: "blur(1px)",
+            WebkitBackdropFilter: "blur(1px)",
+            borderRadius: "9999px",
+            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            fontSize: "0.875rem",
+          }}
+        >
+          <img
+            src="https://i.ibb.co/yFwjm0j/logo-white.png"
+            alt=""
+            className="size-4"
+          />
+          @khushaal_04
+        </div>
+      </Link>
     </div>
   );
 }
