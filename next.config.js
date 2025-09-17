@@ -6,6 +6,6 @@ module.exports = {
     STRIPE_PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY,
   },
   images: {
-    domains: ["pbs.twimg.com"],
+    domains: ["pbs.twimg.com", "media.licdn.com"],
   },
 };

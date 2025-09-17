@@ -9,27 +9,30 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "They delivered our MVP in just 12 days, exceeding all expectations. The app was polished and ready for our investor demo.",
-    author: "Sarah Johnson",
-    role: "Founder, HealthTech Startup",
-    avatar: "/avatars/avatar-1.png",
+      "Super smooth working with Khush, he was super helpful and overdelivered within short timeline. Would definitely keep working with him on next mobile apps! ",
+    author: "@MaximeMB",
+    role: "Founder, EasyChef AI & Blogbuster",
+    avatar:
+      "https://pbs.twimg.com/profile_images/1808500045576065025/8l79rTSl_400x400.jpg",
   },
   {
     id: 2,
     quote:
-      "Working with this team was the best decision we made. They understood our vision and executed it flawlessly within the promised timeframe.",
-    author: "Michael Chen",
-    role: "CTO, FinTech Innovation",
-    avatar: "/avatars/avatar-2.png",
+      "Khushaal built an incredible app with multiple features, which has since become the foundation of our business. Despite our limited knowledge of software and app development, he guided us through every step, patiently assisting with setup and account management. He continues to help us with further updates that we require and is always keen to converse with us to hear how things are going.",
+    author: "@MarcRisi",
+    role: "Founder, Fitness Centre",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4E03AQF77fXU3wvw9Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710361077860?e=1761177600&v=beta&t=9keFEhsgdmHgrbLil7pT0S-ZryLX1u8cHSFI1nemjyE",
   },
-  {
-    id: 3,
-    quote:
-      "From concept to launch in two weeks - I didn't think it was possible until they proved me wrong. Incredible work!",
-    author: "Priya Patel",
-    role: "CEO, RetailTech Solutions",
-    avatar: "/avatars/avatar-3.png",
-  },
+  // {
+  //   id: 3,
+  //   quote:
+  //     "From concept to launch in two weeks - I didn't think it was possible until they proved me wrong. Incredible work!",
+  //   author: "@RishiPatel",
+  //   role: "Co-founder & Software Engineer",
+  //   avatar:
+  //     "https://media.licdn.com/dms/image/v2/D4E03AQH6GpjG9ljmHA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731971248605?e=1761177600&v=beta&t=lD0F0RBGXAmE062LUMjcml5J5-WGrH4TR53XGiGjmOw",
+  // },
 ];
 
 function Testimonial() {
@@ -55,8 +58,7 @@ function Testimonial() {
             to say about our rapid MVP development.
           </p>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-wrap gap-8 max-w-7xl mx-auto justify-center">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.id}
@@ -64,31 +66,9 @@ function Testimonial() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
+              className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700 backdrop-blur-sm flex-1 basis-[calc(50%-1rem)] min-w-[300px] max-w-2xl"
             >
               <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <svg
-                    width="45"
-                    height="36"
-                    viewBox="0 0 45 36"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="text-blue-500"
-                  >
-                    <path
-                      d="M13.5 0C6.04416 0 0 6.04416 0 13.5C0 20.9558 6.04416 27 13.5 27H18V36H9C4.02944 36 0 31.9706 0 27V13.5C0 6.04416 6.04416 0 13.5 0Z"
-                      fill="currentColor"
-                      fillOpacity="0.2"
-                    />
-                    <path
-                      d="M40.5 0C33.0442 0 27 6.04416 27 13.5C27 20.9558 33.0442 27 40.5 27H45V36H36C31.0294 36 27 31.9706 27 27V13.5C27 6.04416 33.0442 0 40.5 0Z"
-                      fill="currentColor"
-                      fillOpacity="0.2"
-                    />
-                  </svg>
-                </div>
-
                 <p className="text-gray-700 dark:text-gray-300 mb-6 flex-grow">
                   "{testimonial.quote}"
                 </p>
@@ -118,7 +98,7 @@ function Testimonial() {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -133,7 +113,7 @@ function Testimonial() {
           >
             Start Your Project
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

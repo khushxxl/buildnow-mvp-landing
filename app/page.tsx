@@ -19,8 +19,8 @@ function Home() {
       <Hero />
       <Process />
       <Projects />
+      <Testimonial />
       <Pricing />
-      {/* <Testimonial /> */}
       <Footer />
       {/* <Founder /> */}
       {/* <AnimatedGridPattern
